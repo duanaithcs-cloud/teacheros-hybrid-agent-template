@@ -1,0 +1,37 @@
+# ProxyPal example config for TeacherOS Hybrid Agent.
+# Copy/generate this as config/proxypal.local.yaml.
+# Never commit real API keys.
+
+host: "127.0.0.1"
+port: 8317
+
+api-keys:
+  - "proxypal-local"
+
+debug: false
+usage-statistics-enabled: true
+logging-to-file: true
+request-retry: 1
+max-retry-interval: 8
+
+quota-exceeded:
+  switch-project: false
+  switch-preview-model: false
+
+gemini-api-key:
+  - api-key: "__GOOGLE_AI_STUDIO_API_KEY__"
+    models:
+      - name: "gemini-3-flash-preview"
+        alias: "gemini-3-flash"
+      - name: "gemini-3-flash-preview"
+        alias: "gemini-3-flash-claude"
+      - name: "gemini-3-flash-preview"
+        alias: "gemini-3-flash-preview"
+      - name: "gemini-2.5-flash"
+        alias: "gemini-2.5-flash"
+      - name: "gemini-2.5-pro"
+        alias: "gemini-2.5-pro"
+
+routing:
+  strategy: "round-robin"
+

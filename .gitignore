@@ -1,0 +1,29 @@
+# Local secrets
+config/local.env
+config/*.local.yaml
+config/*.local.json
+*.key
+*.pem
+
+# Runtime files
+logs/
+outputs/
+_system_backup/
+.cache/
+tmp/
+temp/
+
+# Python / Node
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
