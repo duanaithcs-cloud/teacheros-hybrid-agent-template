@@ -39,6 +39,13 @@ Then paste your Google AI Studio API key when prompted.
 
 Open this folder in Cursor, use the terminal route, and ask Claude Code to create lesson plans, worksheets, Streamlit classroom apps, DOCX, or PPTX outputs.
 
+Optional one-word command:
+
+```bat
+scripts\install-teacheros-command.bat
+teacheros
+```
+
 ## Important Cursor Note
 
 To avoid Cursor Free usage limits, do not use built-in Cursor models such as `Cursor Grok`, `Cursor Claude`, `Cursor GPT`, or `Auto` for heavy agent work.
@@ -79,9 +86,12 @@ Google can change model availability. If one model returns `404`, keep the alias
 +-- docs/
 |   +-- ARCHITECTURE.md
 |   +-- WORKFLOW_TESTED.md
+|   +-- HYBRID_RUNTIME_ANALYSIS.md
+|   +-- TEACHEROS_COMMAND.md
 +-- scripts/
 |   +-- setup.bat
 |   +-- start-teacheros.bat
+|   +-- install-teacheros-command.bat
 |   +-- check-status.ps1
 |   +-- restore-proxypal-config.ps1
 +-- templates/
