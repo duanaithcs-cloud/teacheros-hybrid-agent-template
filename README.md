@@ -46,6 +46,12 @@ scripts\install-teacheros-command.bat
 teacheros
 ```
 
+Optional ProxyPal watchdog:
+
+```bat
+scripts\install-proxypal-watchdog.bat
+```
+
 ## Important Cursor Note
 
 To avoid Cursor Free usage limits, do not use built-in Cursor models such as `Cursor Grok`, `Cursor Claude`, `Cursor GPT`, or `Auto` for heavy agent work.
@@ -88,10 +94,13 @@ Google can change model availability. If one model returns `404`, keep the alias
 |   +-- WORKFLOW_TESTED.md
 |   +-- HYBRID_RUNTIME_ANALYSIS.md
 |   +-- TEACHEROS_COMMAND.md
+|   +-- PROXYPAL_WATCHDOG.md
 +-- scripts/
 |   +-- setup.bat
 |   +-- start-teacheros.bat
 |   +-- install-teacheros-command.bat
+|   +-- install-proxypal-watchdog.bat
+|   +-- watchdog-proxypal.ps1
 |   +-- check-status.ps1
 |   +-- restore-proxypal-config.ps1
 +-- templates/
