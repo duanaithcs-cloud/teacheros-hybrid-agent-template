@@ -2,7 +2,7 @@
 
 **Cursor UX + Claude Code CLI + ProxyPal + Gemini Flash for teachers and EdTech creators.**
 
-This repository packages a tested local workflow for building lesson plans, IELTS materials, DOCX/PPTX files, and small education apps with an OpenAI-compatible local proxy.
+This repository packages a tested local workflow for building Vietnamese lesson plans, teaching materials, DOCX/PPTX files, and small classroom apps with an OpenAI-compatible local proxy.
 
 The goal is simple: a teacher can clone this project, run one setup script, paste their own Google AI Studio API key, and work from Cursor Terminal without spending Cursor Agent quota.
 
@@ -12,7 +12,7 @@ The goal is simple: a teacher can clone this project, run one setup script, past
 - Routes Claude Code CLI requests through ProxyPal.
 - Uses Gemini model aliases such as `gemini-3-flash-claude`.
 - Keeps API keys in ignored local files, never in Git.
-- Gives Cursor project rules for Vietnamese UTF-8, GDPT 2018, lesson plans, IELTS, DOCX, PPTX, and Streamlit apps.
+- Gives Cursor project rules for Vietnamese UTF-8, GDPT 2018, lesson plans, DOCX, PPTX, and Streamlit classroom apps.
 
 ## Quick Start
 
@@ -37,7 +37,7 @@ Then paste your Google AI Studio API key when prompted.
 0_Start_TeacherOS.bat
 ```
 
-Open this folder in Cursor, use the terminal route, and ask Claude Code to create lesson plans, IELTS materials, Streamlit apps, DOCX, or PPTX outputs.
+Open this folder in Cursor, use the terminal route, and ask Claude Code to create lesson plans, worksheets, Streamlit classroom apps, DOCX, or PPTX outputs.
 
 ## Important Cursor Note
 
@@ -71,29 +71,27 @@ Google can change model availability. If one model returns `404`, keep the alias
 
 ```text
 .
-├── .cursor/
-│   └── .cursorrules
-├── config/
-│   ├── proxypal.config.example.yaml
-│   └── claude-code.env.example
-├── docs/
-│   ├── ARCHITECTURE.md
-│   └── WORKFLOW_TESTED.md
-├── scripts/
-│   ├── setup.bat
-│   ├── start-teacheros.bat
-│   ├── check-status.ps1
-│   └── restore-proxypal-config.ps1
-├── templates/
-│   ├── lesson_plans/
-│   ├── pptx_builder/
-│   ├── vocabulary/
-│   └── writing/
-├── 0_Start_TeacherOS.bat
-├── 1_Check_Status.bat
-├── 2_Open_Cursor_Project.bat
-├── START_HERE.md
-└── TROUBLESHOOTING.md
++-- .cursor/
+|   +-- .cursorrules
++-- config/
+|   +-- proxypal.config.example.yaml
+|   +-- claude-code.env.example
++-- docs/
+|   +-- ARCHITECTURE.md
+|   +-- WORKFLOW_TESTED.md
++-- scripts/
+|   +-- setup.bat
+|   +-- start-teacheros.bat
+|   +-- check-status.ps1
+|   +-- restore-proxypal-config.ps1
++-- templates/
+|   +-- lesson_plans/
+|   +-- pptx_builder/
++-- 0_Start_TeacherOS.bat
++-- 1_Check_Status.bat
++-- 2_Open_Cursor_Project.bat
++-- START_HERE.md
++-- TROUBLESHOOTING.md
 ```
 
 ## Performance Expectations
@@ -110,4 +108,3 @@ Google can change model availability. If one model returns `404`, keep the alias
 - Do not commit real API keys.
 - Keep ProxyPal running locally on `127.0.0.1`.
 - Use `1_Check_Status.bat` before a long work session.
-
