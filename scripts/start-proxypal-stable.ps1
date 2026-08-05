@@ -7,6 +7,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+$ProjectRoot = $ProjectRoot.Trim('"').TrimEnd('\', '/')
+
 $configPath = Join-Path $ProjectRoot "config\proxypal.local.yaml"
 $cliPath = Join-Path $ProxyPalDir "cli-proxy-api.exe"
 $logDir = Join-Path $ProjectRoot "logs"

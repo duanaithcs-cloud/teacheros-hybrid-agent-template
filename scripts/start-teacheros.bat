@@ -4,6 +4,7 @@ chcp 65001 >nul
 title TeacherOS Hybrid Agent
 
 set "ROOT=%~dp0.."
+for %%I in ("%ROOT%") do set "ROOT=%%~fI"
 set "PROXYPAL_DIR=%LOCALAPPDATA%\ProxyPal"
 set "PROXYPAL_CLI=%PROXYPAL_DIR%\cli-proxy-api.exe"
 set "CONFIG=%ROOT%\config\proxypal.local.yaml"
