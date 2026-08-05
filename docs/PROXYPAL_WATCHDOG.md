@@ -19,8 +19,10 @@ TeacherOS_ProxyPal_Watchdog
 The task runs every minute and calls:
 
 ```text
-scripts\watchdog-proxypal.ps1
+scripts\run-watchdog-hidden.vbs
 ```
+
+The VBS runner starts `scripts\watchdog-proxypal.ps1` with a hidden window so the desktop does not flash every minute.
 
 ## What It Checks
 
@@ -38,6 +40,8 @@ config/proxypal.local.yaml
 
 It does not print or upload API keys.
 
+It only restarts `cli-proxy-api.exe`; it does not close the ProxyPal desktop UI.
+
 ## Logs
 
 Logs are written to:
@@ -45,4 +49,3 @@ Logs are written to:
 ```text
 logs/proxypal-watchdog.log
 ```
-
