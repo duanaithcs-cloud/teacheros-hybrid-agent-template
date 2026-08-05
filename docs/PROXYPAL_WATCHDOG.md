@@ -42,6 +42,14 @@ It does not print or upload API keys.
 
 It only restarts `cli-proxy-api.exe`; it does not close the ProxyPal desktop UI.
 
+The daily `teacheros` launcher uses the same stable bridge rule through:
+
+```text
+scripts/start-proxypal-stable.ps1
+```
+
+That starter reuses the running bridge when it is healthy. If repair is needed, it restarts only `cli-proxy-api.exe` in a hidden window and leaves the ProxyPal desktop UI open.
+
 ## Logs
 
 Logs are written to:

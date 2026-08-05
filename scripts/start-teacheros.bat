@@ -7,6 +7,7 @@ set "ROOT=%~dp0.."
 set "PROXYPAL_DIR=%LOCALAPPDATA%\ProxyPal"
 set "PROXYPAL_CLI=%PROXYPAL_DIR%\cli-proxy-api.exe"
 set "CONFIG=%ROOT%\config\proxypal.local.yaml"
+set "STARTER=%ROOT%\scripts\start-proxypal-stable.ps1"
 
 if not exist "%CONFIG%" (
   echo [ERROR] Missing config\proxypal.local.yaml
@@ -23,9 +24,12 @@ if not exist "%PROXYPAL_CLI%" (
   exit /b 1
 )
 
-taskkill /IM cli-proxy-api.exe /F >nul 2>nul
-start "TeacherOS ProxyPal" /min "%PROXYPAL_CLI%" -config "%CONFIG%"
-timeout /t 4 /nobreak >nul
+powershell -NoProfile -ExecutionPolicy Bypass -File "%STARTER%" -ProjectRoot "%ROOT%"
+if errorlevel 1 (
+  echo [ERROR] Cannot start ProxyPal stable bridge.
+  pause
+  exit /b 1
+)
 
 set "ANTHROPIC_AUTH_TOKEN=proxypal-local"
 set "ANTHROPIC_API_KEY=proxypal-local"
