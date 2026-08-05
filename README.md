@@ -52,6 +52,13 @@ Optional ProxyPal watchdog:
 scripts\install-proxypal-watchdog.bat
 ```
 
+If Google returns `429 All credentials`, stop retry loops and use lite mode:
+
+```bat
+teacheros-reset
+teacheros-lite
+```
+
 ## Important Cursor Note
 
 To avoid Cursor Free usage limits, do not use built-in Cursor models such as `Cursor Grok`, `Cursor Claude`, `Cursor GPT`, or `Auto` for heavy agent work.
@@ -95,6 +102,7 @@ Google can change model availability. If one model returns `404`, keep the alias
 |   +-- HYBRID_RUNTIME_ANALYSIS.md
 |   +-- TEACHEROS_COMMAND.md
 |   +-- PROXYPAL_WATCHDOG.md
+|   +-- QUOTA_429_PLAYBOOK.md
 +-- scripts/
 |   +-- setup.bat
 |   +-- start-teacheros.bat

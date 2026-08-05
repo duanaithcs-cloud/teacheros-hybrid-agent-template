@@ -28,6 +28,7 @@ start "TeacherOS ProxyPal" /min "%PROXYPAL_CLI%" -config "%CONFIG%"
 timeout /t 4 /nobreak >nul
 
 set "ANTHROPIC_AUTH_TOKEN=proxypal-local"
+set "ANTHROPIC_API_KEY=proxypal-local"
 set "ANTHROPIC_BASE_URL=http://127.0.0.1:8317"
 set "ANTHROPIC_MODEL=gemini-3-flash-claude"
 set "ANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-3-flash-claude"
@@ -43,4 +44,3 @@ echo.
 
 cd /d "%ROOT%"
 claude --model gemini-3-flash-claude
-
